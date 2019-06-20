@@ -1,18 +1,25 @@
 def password():
 	c = []
-	a = ["welcome","abc123","password","password1","12345", "12345678"]
+	h = []
+	a = ["welcom","abc123","password6543","password1234","123456", "123456789101"]
 	for i in range(33, 128):
 		c.append(chr(i))
 	i = raw_input("Pick hard or easy password in lowercase:")
+	r = raw_input("Pick length of password 6 or 12:")
+	o = int(r)
 	if i == "hard":
 		from random import shuffle
 		for k in range(len(c)-1):
 			shuffle(c)
-			m = "".join(c[0:11])
+			m = "".join(c[0:o+1])
 		return m
 	if i == "easy":
-		from random import choice
-		x = choice(a)
-		return x
+		for m in range(len(a)-1):
+			if len(a[m]) == o:
+				h.append(a[m])
+				from random import choice
+				x = choice(h)
+				return x
 
 print(password())	
+
