@@ -1,9 +1,17 @@
 def password():
+	numbers = []
+	uppercase = []
+	symbols = []
+	lowercase = []
 	c = []
-	h = []
 	a = ["welcom","abc123","password6543","password1234","123456", "123456789101"]
-	for i in range(33, 128):
+	for i in range(33, 127):
 		c.append(chr(i))
+	for l in range(len(c)-1):
+		numbers.append(c[])
+		uppercase.append(c[])
+		symbols.append(c[])
+		lowercase = (c[])
 	i = raw_input("Pick hard or easy password in lowercase:")
 	r = raw_input("Pick length of password 6 or 12:")
 	o = int(r)
